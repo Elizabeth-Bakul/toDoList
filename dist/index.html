@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ToDo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Spartan:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <a class="logo" href="#">
+            <img src="../src/img/Logo.svg" alt="Лого" class="logo__img" />
+            <h1 class="logo__name">Avtograph</h1>
+          </a>
+          <div class="nav">
+            <a class="nav-link" href="mailto:user@mail.ru">
+              <img src="../src/img/mail.svg" alt="mail" class="nav__img" />
+            </a>
+            <img src="../src/img/user.svg" alt="user" class="nav__user" />
+            <div class="nav-user user">
+              <img src="../src/img/user-main.svg" alt="main user" class="user__img">
+              <span class="user__name">user</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="list">
+      <div class="container">
+        <div class="list-wrapper">
+          <div class="list-header">
+            <h2 class="list__header">Avtograph TODO list</h2>
+            <ul class="list-nav">
+              <li class="list-nav__item">
+                <span class="list-nav__text" data-attr="all">Все</span> 
+                <img src="../src/img/Vector.svg" alt="" class="list-nav__img" />
+                <ul class="submenu">
+                  <li class="active" data-attr="all">Все</li>
+                  <li data-attr="done">Выполненные</li>
+                  <li data-attr="work">В работе</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <form class="list-form todo-control">
+            <input class="list-input" type="text" placeholder="Поле ввода" />
+            <button class="list-button" id="add"></button>
+          </form>
+          <ul class="todo todo-list" id="todo">
+            <li class="todo-item todo-item--active">
+              <div class="todo-span">
+                <div class="todo-check"></div>
+                <span class="todo-text done">Cварить кофе</span>
+              </div>
+              <button class="todo-remove"></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <script defer src="../assets/scripts.js"></script>
+  </body>
+</html>

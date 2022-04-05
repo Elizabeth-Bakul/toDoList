@@ -1,0 +1,60 @@
+
+.header {
+  padding-top: 15px;
+  color: $color;
+  padding-bottom: 11px;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  &__name {
+    font-family: Spartan;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $color;
+  }
+  &__img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  &__user {
+    display: none;
+    width: 15px;
+    height: 15px;
+  }
+  &-link {
+    width: 15px;
+    height: 15px;
+    margin-right: 9px;
+  }
+}
+.user{
+  display: flex;
+  align-items: center;
+
+  &__img{
+    width: 26px;
+    height: 26px;
+    margin-right: 13px;
+  }
+  &__name{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 13px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,153 @@
+.list {
+  padding-top: 32px;
+  padding-bottom: 130px;
+  background-color: $backcolor;
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color;
+    margin-bottom: 26px;
+  }
+  &__header {
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  &-nav {
+    cursor: pointer;
+    position: relative;
+    text-align: right;
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    &__img {
+      margin-left: 7px;
+    }
+    &__item{
+      &:hover {
+      .list-nav__img {
+        transform: rotate(180deg);
+      }
+      .submenu {
+        display: block;
+      }
+    }
+    }
+    
+  }
+  &-input {
+    width: 100%;
+    height: 38px;
+    border: 0;
+    background-color: white;
+    padding: 14px 40px 14px 16px;
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    color: #bac2cd;
+  }
+  &-button {
+    width: 32px;
+    height: 32px;
+    background: #55b8ff;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &-form {
+    position: relative;
+  }
+}
+
+.submenu {
+  padding: 15px 20px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  display: none;
+  text-align: left;
+  width: 129px;
+  background-color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  li:not(:first-child) {
+    padding-top: 15px;
+  }
+  .active {
+    font-weight: 700;
+    background: url("../img/Vector ok.svg") no-repeat right 0% bottom 5px;
+  }
+}
+.todo {
+  margin-top: 10px;
+  &-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #ffffff;
+    color: $color;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    font-family: "Noto Sans";
+    &--active{
+      .todo-check{
+        background-image: url("../img/done.svg");
+      }
+      .todo-text{
+        text-decoration: line-through;
+      }
+    }
+    &--dnone{
+      display: none;
+    }
+  }
+  &-check{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid #bfc6d0;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+
+  }
+  &-item:not(:first-child){
+    margin-top: 5px;
+  }
+  &-span{
+    display: inline-flex;
+    align-items: center;
+    
+  }
+  &-remove{
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/delete.svg");
+    width: 23px;
+    height: 23px;
+  }
+
+}
